@@ -25,6 +25,7 @@
 package test;
 
 import org.junit.Test;
+import java.io.IOException;
 
 public class SomeTest extends Base {
 
@@ -44,12 +45,14 @@ public class SomeTest extends Base {
         run();
     }
 
-    @Test public void test5() {
+    @Test public void test5() throws IOException {
         run();
+        throw new IOException("test5 test5 test5!!!!!!");
     }
 
     @Test public void test6() {
         run();
+        fail("test6 oops");
     }
 
 }
